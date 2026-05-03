@@ -19,6 +19,7 @@ jobs:
         run: npm test
   deploy:
     runs-on: ubuntu-latest
+    needs: tests #making it sequential 
     steps:
         - name: Get code
           uses: actions/checkout@v3
